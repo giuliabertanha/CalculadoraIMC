@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,27 +28,29 @@
                     <input type="submit" class="btn btn-primary mt-3 mb-3 w-50" value="Calcular">
 </html>
 <?php
-    $m = $_POST['m'];
-    $a = $_POST['a'];
-    $a = $a/100;
-    if($m>=0 && $a>=0){
-        $imc = $m/($a*$a);
-        echo "IMC: $imc <br/>";
+    if(isset($_POST['m'])&&isset($_POST['a'])) {
+        $m = $_POST['m'];
+        $a = $_POST['a'];
+        $a = $a/100;
+        if($m>=0 && $a>=0){
+            $imc = $m/($a*$a);
+            echo "IMC: $imc <br/>";
 
-        if($imc < 20) {
-            echo "<span>Abaixo do peso</span>";
-        } else if($imc >= 20 && $imc < 25) {
-            echo "<span>Normal</span>";
-        } else if($imc >= 25 && $imc < 30) {
-            echo "<span>Sobrepeso</span>";
-        } else if($imc >= 30 && $imc < 40) {
-            echo "<span>Obesidade</span>";
-        } else if($imc >= 40) {
-            echo "<span>Obesidade mórbida</span>";
+            if($imc < 20) {
+                echo "<span>Abaixo do peso</span>";
+            } else if($imc >= 20 && $imc < 25) {
+                echo "<span>Normal</span>";
+            } else if($imc >= 25 && $imc < 30) {
+                echo "<span>Sobrepeso</span>";
+            } else if($imc >= 30 && $imc < 40) {
+                echo "<span>Obesidade</span>";
+            } else if($imc >= 40) {
+                echo "<span>Obesidade mórbida</span>";
+            }
+
+        } else {
+            echo "<span>Valor inválido.</span>";
         }
-
-    } else {
-        echo "<span>Valor inválido.</span>";
     }
 ?>
 <html>
