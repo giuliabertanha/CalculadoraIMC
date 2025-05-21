@@ -19,11 +19,11 @@
                 <form class="w-100 d-flex flex-column align-items-center justify-content-center" action="index.php" method="POST">
                     <div class="w-50">
                         <label for="massa">Massa(kg): </label><br/>
-                        <input type="step" class="w-100" name="m" id="massa" autocomplete="off"><br/><br/>
+                        <input type="number" step="any" class="w-100" name="m" id="massa" autocomplete="off"><br/><br/>
                     </div>
                     <div class="w-50">
                         <label for="altura">Altura(cm): </label><br/>
-                        <input type="step" class="w-100" name="a" id="altura" autocomplete="off"><br/><br/>
+                        <input type="number" step="any" class="w-100" name="a" id="altura" autocomplete="off"><br/><br/>
                     </div>
                     <input type="submit" class="btn btn-primary mt-3 mb-3 w-50" value="Calcular">
 </html>
